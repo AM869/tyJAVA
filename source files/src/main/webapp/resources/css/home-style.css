@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+    background-image:url("image.gif");
+}
+
+#logout {
+    position: relative;
+    left: 15px;
+}
+
+#info {
+    position: relative;
+    left: 10px;                
+}
+.buttons{
+    margin-top:10px;
+}
+
+.error {
+    font-size: 1.5em;
+    color: red;
+    padding-left: 10px;
+    padding-top: 10px;
+}

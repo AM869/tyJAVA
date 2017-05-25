@@ -1,0 +1,58 @@
+body {                                            
+    background-color:rgba(255,255,0,0.3);               
+}
+h1 {
+    text-align: center;
+}
+h1 > span {
+    color: green;
+}
+.row{
+    margin-top: 20px;
+}
+.warning {
+    padding-left: 15px;
+    padding-top: 15px;
+    color: red;
+    font-size: 120%;
+    height: 3em;
+}
+.info{
+    font-size: 200%;
+    text-align: center;
+}
+
+.pad {
+    color: orange;
+    padding-top: 45px;
+    padding-bottom: 35px;
+}
+
+@media (min-width: 477px) and (max-width: 669px){
+    .pad{
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (min-width: 670px){
+    .pad{
+        padding: 10px 0;
+    }
+}
+
+
+.error {
+    font-size: 1.2em;
+    color: red;
+    padding: 10px;
+    margin: 5px;
+}
+
+.success{
+    font-size: 1.2em;
+    color: green;
+
+}
+
+

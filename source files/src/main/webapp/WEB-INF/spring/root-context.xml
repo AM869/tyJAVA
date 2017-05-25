@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd  
+                            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+">
+	
+    <!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
+		
+    <!-- support for general annotations such as @Required, @Autowired, needs to be declared in each context root/application xml and also servlet context xml-->
+    <context:annotation-config/> 
+    <!--<tx:annotation-driven/>-->       
+                
+<!-- Spring security config classes need to be here in root-context and not in servlet-context of dispatcher servlet, import here spring security xml or annotation config classes-->
+    <context:component-scan base-package="com.klsoukas.mavenproject8" />
+    
+    
+    <!-- This can be referenced independently from entityManagerFactory bean below -->
+    <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="java:comp/env/jdbc/QuizDB"/>
+    </bean>
+    
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="persistenceXmlLocation" value="classpath:./META-INF/persistence.xml"/>
+        <!--<property name="persistenceXmlLocation" value="/META-INF/persistence.xml"/>-->
+        <property name="persistenceUnitName" value="PU1"/>
+    </bean>
+    <!-- If we want to inject instances of EntityManager using @PersistenceContext annotation, we have to enable annotation bean processor in Spring configuration:
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" /> but that is automatically enabled if we already have context: annotation config or context:component-scan!!!
+-->
+
+    <!-- Can be JpaTransactionManager or JtaTransactionManager depending on use case (here we have Jpa cause Resource local, we dont use global transactions, dufferent db tables etc) -->
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager" >
+        <property name="entityManagerFactory" ref="entityManagerFactory"  />
+    </bean>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+ <!--<tx:annotation-driven/>-->
+ 
+ 
+
+    
+</beans>

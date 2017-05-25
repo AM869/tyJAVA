@@ -1,0 +1,46 @@
+    body {
+        background-image:url("image.gif");
+    }
+    h1 {text-align: center;
+    }
+
+    #form {
+           margin:0;
+           padding:20px;
+           border: 5px solid green;
+           background-color:rgba(255,255,0,0.3);
+    }
+    #countdown {
+                background-color: black;
+                color: red;
+                font-size: 250%;
+                position: fixed;
+                right: 15px;
+                bottom: 15px;
+                border-style: solid;
+                border-width: medium;
+                border-color: #98bf21;
+    }
+    p.p1 {
+        font-size: 130%;
+    }
+    p.p2 {
+        font-size: 110%;
+    }
+    #submit_button {                
+        tex-align: center;
+        font-size : 150%;
+        width: 70%;  height: 3em;
+        background: greenyellow;
+        border: 3px solid #000;
+        text-shadow: 1px 1px 1px #000;
+        margin-bottom:50px;
+    }
+
+    body{
+        text-align: center;
+    }
+    
+    .question-block{
+        padding:15px;
+    }

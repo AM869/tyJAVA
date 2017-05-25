@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/javaQuiz">
+  <!--<Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxIdle="30" maxTotal="100" maxWaitMillis="10000" name="jdbc/QuizDB" password="288749" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/tyjava_users" username="klsoukas"/>-->
+  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxIdle="30" maxTotal="OPENSHIFT_MYSQL_MAX_CONNECTIONS" maxWaitMillis="10000" name="jdbc/QuizDB" password="${OPENSHIFT_MYSQL_DB_PASSWORD}" type="javax.sql.DataSource" url="${OPENSHIFT_MYSQL_DB_URL}" username="${OPENSHIFT_MYSQL_DB_USERNAME}"/>
+</Context>

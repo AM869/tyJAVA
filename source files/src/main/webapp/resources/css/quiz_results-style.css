@@ -1,0 +1,45 @@
+body {
+    background-image:url("image.gif");
+}
+#footer{
+    position:static;
+}
+#myform {
+    display: none;
+}
+.div1{
+    clear: left;
+    margin-left: 15px;
+    margin-top:15px;
+    font-size: 200%;
+}
+.div2{
+    margin-left: 15px;
+    margin-top:15px;
+    font-size: 150%;
+}
+.div3{
+    margin-left: 15px;
+    margin-top:15px;
+    font-size: 125%;
+    font-weight:normal;
+}
+.button{
+    float: left;
+    margin-left: 15px;
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
+
+.display-inline{
+    display: inline;
+}
+div.class1{
+    margin:15px;
+}

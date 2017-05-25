@@ -1,0 +1,19 @@
+body {
+    background-image:url("image.gif");   
+}
+h3{
+    font-size: 2em;
+}
+div.class1{
+    margin:15px;
+}
+p.class2{
+    font-size:1.5em;
+}
+.buttons{
+    display: inline;
+}
+
+.display-inline{
+    display: inline;
+}

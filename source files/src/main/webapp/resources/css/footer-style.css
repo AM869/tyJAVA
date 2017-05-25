@@ -1,0 +1,24 @@
+#footer {
+    /*reset font-size*/
+    font-size: 1em;
+    
+    /* start position */
+    position:absolute;
+    bottom: 40px;
+    
+    /*1.assign full width 2.remove all margin 3.give left and right same margin*/
+    width: calc(100% - 30px);
+    margin:0;
+    margin-left: 15px;
+    margin-right:15px;
+    border-top: 1px solid gray;
+    
+    /*background smaller than font size (which defaults to 1em)*/
+    height: 3px;
+    background-color: white;
+    
+    /* text */
+    color: green;
+    text-align: left;
+}
+
